@@ -13,4 +13,13 @@ public class UndoManagerTest {
         assertSame(manager1, manager2, "Two calls must return the same instance.");
     }
 
+    @Test
+    void addCommandPersistsInHistory() {
+        UndoManager undo = UndoManager.getInstance();
+        undo.addCommand("ls -l");
+        assertTrue(undo.getCommands().contains("ls -l"),
+                "The command 'ls -l' should be stored in the history");
+    }
+
+
 }

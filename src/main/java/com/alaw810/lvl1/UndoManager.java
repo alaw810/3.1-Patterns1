@@ -1,7 +1,12 @@
 package com.alaw810.lvl1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UndoManager {
     private static UndoManager instance;
+
+    private final List<String> commands = new ArrayList<>();
 
     private UndoManager() {}
 
@@ -10,5 +15,14 @@ public class UndoManager {
             instance = new UndoManager();
         }
         return instance;
+    }
+
+    public void addCommand(String command) {
+        commands.add(command);
+    }
+
+    // Test helper
+    public List<String> getCommands() {
+        return new ArrayList<>(commands);
     }
 }
