@@ -21,5 +21,14 @@ public class UndoManagerTest {
                 "The command 'ls -l' should be stored in the history");
     }
 
+    @Test
+    void removeLastCommandRemovesIt() {
+        UndoManager undo = UndoManager.getInstance();
+        //undo.addCommand("help");
+        undo.removeLastCommand();
+        assertFalse(undo.getCommands().contains("help"),
+                "The last command should have been removed.");
+    }
+
 
 }

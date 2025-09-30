@@ -21,6 +21,12 @@ public class UndoManager {
         commands.add(command);
     }
 
+    public void removeLastCommand() {
+        if(!commands.isEmpty()) {
+            commands.removeLast();
+        }
+    }
+
     // Test helper
     public List<String> getCommands() {
         return new ArrayList<>(commands);
