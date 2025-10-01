@@ -1,4 +1,4 @@
-# Undo Singleton Project
+# Patterns 1
 
 ## 📄 Description - Exercise Statement
 
@@ -8,14 +8,6 @@ The objective is to replicate the behavior of the Linux `history`
 command, allowing commands to be added, removed, and listed.\
 The project includes a `Main` class that demonstrates the functionality
 via a console menu.
-
-**Exercise statement (Level 1):** \> Create a class that replicates the
-functionality of the `Undo` command. This class will be used by the
-`Main` class, which allows input from the console.\
-\> The class `Undo` must store the last commands entered. It must allow
-adding or removing commands, as well as listing them (similar to the
-`history` command in Linux).\
-\> The `Undo` class must necessarily implement the Singleton pattern.
 
 ## 💻 Technologies Used
 
